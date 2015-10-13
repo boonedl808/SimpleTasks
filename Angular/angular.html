@@ -16,9 +16,32 @@ Once complete, try making it switch to a random color each click. Use DOM, jQuer
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 		<link rel="stylesheet" href="angular.less">
-		<script src="angular.js"></script>
 	</head>
-	<body>
+	<body ng-controller='examplesController'>
+		<h3>Angular #1</h3>
+		<button id="Button" ng-click='clickMe()'>Click Here</button>
+		<br>
+		<h3>Angular #2</h3>
+  			<input type="text" ng-clcik='clickMe()' ng-model="greeting" aria-label="greeting" />
+  			<button ng-click="doGreeting(greeting)">CLICK</button>
+		<br>
+		<h3>Angular #3</h3>
+		<div id="color">Hello Changing Color Text, hover!</div>
+		<br>
+		<h3>Angular #4</h3>
+		<p id="clickColor">Angular I wish I was smarter, but click me!</p>
+		<br>
+		<h3>Angular #5</h3>
+		<div id="empty">
+			
+		</div>
+		<br>
+		<h3>Angular #6</h3>
+		<ul id="list">
+			
+		</ul>
+	<script src="angular.js"></script>
 	</body>
 </html>

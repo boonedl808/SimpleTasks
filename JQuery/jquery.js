@@ -1,4 +1,4 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 	
 // JQUERY TASK 1:
 $('#Button').click(function() {
@@ -22,14 +22,13 @@ $("#clickColor").click(function() {
 });
 
 // JQUERY TASK 5:
-$("#empty").append("<span>Daniel Boone</span>");
+$("#empty").append($('<span>Daniel Boone</span>'));
 
 // JQUERY TASK 6:
-// $("#list").add(function() {
-	var array = ['Peter', 'Dog', 'Special', 'Ant', 'Class'];
-	var oList = ('#list');
-	
-	$.each(array, function(i) {
-		var li = $('<li/>')
-		.appendTo(oList);
+	var arr = ['Peter', 'Dog', 'Special', 'Ant', 'Class'];
+
+	var ul = $('#list');
+	$(arr).each(function(i,e) {
+		ul.append($('<li></li>').text(arr[i]));
 	});
+});
