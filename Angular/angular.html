@@ -14,34 +14,35 @@ Once complete, try making it switch to a random color each click. Use DOM, jQuer
 
 6. Create a <ul> in HTML. From JavaScript add an <li> for items in an array that you create. Use DOM, jQuery, and Angular.-->
 <!DOCTYPE html>
-<html>
+<html x-ng-app="myApp">
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 		<link rel="stylesheet" href="angular.less">
 	</head>
-	<body ng-controller='examplesController'>
+	<body ng-controller="examplesController">
 		<h3>Angular #1</h3>
-		<button id="Button" ng-click='clickMe()'>Click Here</button>
+		<button id="Button" ng-click="clickMe()">Click Here</button>
 		<br>
 		<h3>Angular #2</h3>
-  			<input type="text" ng-clcik='clickMe()' ng-model="greeting" aria-label="greeting" />
-  			<button ng-click="doGreeting(greeting)">CLICK</button>
+  			<input type="text" ng-model="message" placeholder="message">
+  			<button ng-click="alertInput()">Click Here</button>
 		<br>
 		<h3>Angular #3</h3>
-		<div id="color">Hello Changing Color Text, hover!</div>
+		<div class="hoverColor">Hello Changing Color Text, hover!</div>
+		<div ng-click="showHover();" ng-class="{ darksalmon: hover }" ng-mouseover="hover = true" ng-mouseleave="hover = false">
 		<br>
 		<h3>Angular #4</h3>
-		<p id="clickColor">Angular I wish I was smarter, but click me!</p>
+		<p ng-click="getRandomColor()" style="color: {{randomColor}}">Angularrrrr I'm mad, but CLICK ME.</p>
 		<br>
 		<h3>Angular #5</h3>
-		<div id="empty">
+		<div class="addspan-div" ng-bind-html="myContent">
 			
 		</div>
 		<br>
 		<h3>Angular #6</h3>
-		<ul id="list">
-			
-		</ul>
+			<ul>
+				<li ng-repeat="name in names">{{name}}</li>
+			</ul>
 	<script src="angular.js"></script>
 	</body>
 </html>
